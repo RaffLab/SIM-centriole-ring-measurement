@@ -1,0 +1,11 @@
+Parameters
+The name of red channel: Cep97, The name of green channel: Asl
+The eccentricity threshold: 1.2
+The lower bound of radius(red): 0.5, The upper bound of radius(red): 2.5
+The lower bound of radius(green): 3.5, The upper bound of radius(green): 4.5
+The number of tif images analyzed: 5
+
+
+Results
+The mean radius of Cep97: 1.70523845936 px
+The mean radius of Asl: 3.8750729035 px
