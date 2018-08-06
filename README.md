@@ -2,7 +2,7 @@
 
 The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. The image are annotated by blue bounding box (0, 0, 255) using Fiji.  
 It is an example image we obtained from 3DSIM. Cep97 and Asl were labelled.  
-![alt text](Demo/example1.tif)  
+![alt text](Demo/example1.png)  
 (In courtesy of Alan Waimann)
 
 ## Getting Started
@@ -93,7 +93,7 @@ The output:
 ### Advanced usage and caution
 - Remember to create a bounding box of **Blue** color on centriole!
 
-(## Authors
+### Authors
 **Isaac Wong** @ Raff Lab
 
 ## Acknowledgements
