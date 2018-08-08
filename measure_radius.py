@@ -3,7 +3,7 @@ Created on 5 August 2018
 @author: Isaac Wong
 @email: isaacwongsiushing@gmail.com
 
-The script and all the code within is licensed under MIT License
+The script and all the code within is licensed under GNU GENERAL PUBLIC LICENSE
 """
 import os
 import argparse
@@ -49,11 +49,11 @@ if __name__ == "__main__":
     parser.add_argument('-d', dest='directory', help='directory of files', type=str, required=True)
     parser.add_argument('-rn', dest='channel_red_name', help='name of red channel', type=str, required=True)
     parser.add_argument('-gn', dest='channel_green_name', help='name of green channel', type=str, required=True)
-    parser.add_argument('-e', dest='eccentricity', help='eccentricity', type=float, required=False)
-    parser.add_argument('-rmin', dest='min_radius_red', help='lower bound of radius in red channel', type=float, required=False)
-    parser.add_argument('-rmax', dest='max_radius_red', help='upper bound of radius in red channel', type=float, required=False)
-    parser.add_argument('-gmin', dest='min_radius_green', help='lower bound of radius in green channel', type=float, required=False)
-    parser.add_argument('-gmax', dest='max_radius_green', help='upper bound of radius in green channel', type=float, required=False)
+    parser.add_argument('-e', dest='eccentricity', help='eccentricity (default: 1.2)', type=float, required=False)
+    parser.add_argument('-rmin', dest='min_radius_red', help='lower bound of radius in red channel (default: 0.5)', type=float, required=False)
+    parser.add_argument('-rmax', dest='max_radius_red', help='upper bound of radius in red channel (default: 2.5)', type=float, required=False)
+    parser.add_argument('-gmin', dest='min_radius_green', help='lower bound of radius in green channel (default: 3.5)', type=float, required=False)
+    parser.add_argument('-gmax', dest='max_radius_green', help='upper bound of radius in green channel (default: 4.5)', type=float, required=False)
 
     arg = parser.parse_args()
 

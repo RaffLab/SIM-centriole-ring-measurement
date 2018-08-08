@@ -1,8 +1,10 @@
 # Measure the radius of labelled centriole imaged by 3DSIM
 
-The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. The image are annotated by blue bounding box (0, 0, 255) using Fiji.  
+The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. To measure, we perform Ring Gaussian Modelling on each centriole ang obtain the thickness of centriole, major, and minor axis of it. The equation we used:  
+$$ \begin{equation} z = B_0 + A_0e^{-(\frac{\sqrt{(x-x_0)^2 + (y-y_0)^2} - \frac{Mm}{\sqrt{M^2sin^2(φ + θ) + m^2cos^2(φ + θ)}}}{w_0})^2} \end{equation} $$  
+The image are annotated by blue bounding box (0, 0, 255) using Fiji.  
 It is an example image we obtained from 3DSIM. Cep97 and Asl were labelled.  
-![alt text](Demo/example1.png)  
+![alt text](Images/example1.png)  
 (In courtesy of Alan Waimann)
 
 ## Getting Started
@@ -28,8 +30,7 @@ Press **Enter** Please wait patiently.
 
 ## Running and tests
 ### Download the example files
-From Demo folder in this repository download example1.tif to exmple5.tif. Save them on the Desktop. Create a new folder called Demo.  
-Place them Demo folder in your local machine.  
+From Demo folder in this repository download example1.tif to exmple5.tif. Save them on the Desktop. Create a new folder called Demo. Place Demo folder in your local machine.  
 The images were taken by OMX-V3 microscope and converted to tif formate for our usage.  
 
 Open terminal and type:  
@@ -57,8 +58,9 @@ python quantitfy_centrosome.py -d "/Users/your_user_name_of_computer/Desktop/Dem
 ```
 The available arguments of the program are:  
 ```
-python quantitfy_centrosome.py [-d] [-rn] [-gn] [-e] [-rmin] [-rmax] [-gmin] [-gmax]
+python quantitfy_centrosome.py -d -rn -gn [-e] [-rmin] [-rmax] [-gmin] [-gmax] [-h]
 ```
+Square bracket indicates it is an optional argument  
 | Argument | Description |
 | :--- | :---------------------------------------------------- |
 | -d | The path to the folder containing all images (Required by the program) |
@@ -69,12 +71,13 @@ python quantitfy_centrosome.py [-d] [-rn] [-gn] [-e] [-rmin] [-rmax] [-gmin] [-g
 | -rmax | Upper bound of the radius in red channel (default = 2.5) |
 | -gmin | Lower bound of the radius in green channel (default = 3.5) |
 | -gmax | Upper bound of the radius in green channel (default = 4.5) |
+| -h | Help |
   
 The program creates "Results" folder in the same directory as the images. In "Results", there are several files namely Parameters_results.txt, radius_profile.png, raw_data.csv, and summary.csv
 
 There are two montages, each contains multiple centrioles-model pair:
-![alt text](Demo/Results/Asl_montages.png)  
-![alt text](Demo/Results/Cep97_montages.png)  
+![alt text](Images/Asl_montages.png)  
+![alt text](Images/Cep97_montages.png)  
 
 ### Explanation of the output
 The program perform Otsu thresholding on the **first frame** of the video. The same threshold will be applied throughout every frame of the video. Any intensity above the threshold will be preserved in the binarized mask.  
@@ -91,7 +94,7 @@ The output:
 | summary.csv | calculate the mean, standard deviation, and other statistical parameters from raw_data.csv |
 
 ### Advanced usage and caution
-- Remember to create a bounding box of **Blue** color on centriole!
+- Remember to create a **Blue** bounding box for centriole that you want to measure!
 
 ### Authors
 **Isaac Wong** @ Raff Lab
@@ -104,7 +107,7 @@ The output:
 - Cancer Research UK
 
 ## License
-This project is licensed under the MIT License
+This project is licensed under GNU GENERAL PUBLIC LICENSE
 
 
 
