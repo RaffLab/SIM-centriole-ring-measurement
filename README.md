@@ -2,9 +2,9 @@
 
 The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. To measure, we perform Ring Gaussian Modelling on each centriole ang obtain the thickness of centriole, major, and minor axis of it. 
 The image are annotated by blue bounding box (0, 0, 255) using Fiji.  
-It is an example image we obtained from 3DSIM. Cep97 and Asl were labelled.  
+It is an example image we obtained from 3DSIM. Cep97 and Asl were labelled:  
 ![alt text](Images/example1.png)  
-(In courtesy of Alan Waimann)
+(courtesy of Alan Waimann)
 
 ## Getting Started
 
@@ -99,6 +99,7 @@ The output:
 **Isaac Wong** @ Raff Lab
 
 ## Acknowledgements
+- Alan Waimann for generating the data
 - Everyone from Raff Lab
 - Sir William Dunn School of Pathology
 - Balliol College
