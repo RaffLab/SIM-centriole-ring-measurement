@@ -1,7 +1,6 @@
 # Measure the radius of labelled centriole imaged by 3DSIM
 
-The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. To measure, we perform Ring Gaussian Modelling on each centriole ang obtain the thickness of centriole, major, and minor axis of it. The equation we used:  
-$$ \begin{equation} z = B_0 + A_0e^{-(\frac{\sqrt{(x-x_0)^2 + (y-y_0)^2} - \frac{Mm}{\sqrt{M^2sin^2(φ + θ) + m^2cos^2(φ + θ)}}}{w_0})^2} \end{equation} $$  
+The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. To measure, we perform Ring Gaussian Modelling on each centriole ang obtain the thickness of centriole, major, and minor axis of it. 
 The image are annotated by blue bounding box (0, 0, 255) using Fiji.  
 It is an example image we obtained from 3DSIM. Cep97 and Asl were labelled.  
 ![alt text](Images/example1.png)  
@@ -63,15 +62,15 @@ python quantitfy_centrosome.py -d -rn -gn [-e] [-rmin] [-rmax] [-gmin] [-gmax] [
 Square bracket indicates it is an optional argument  
 | Argument | Description |
 | :--- | :---------------------------------------------------- |
-| -d | The path to the folder containing all images (Required by the program) |
-| -rn | The name of red channel (Required by the program) |
-| -gn | The name of green channel (Required by the program) |
-| -e | Eccentricity threshold (default = 1.2) |
-| -rmin | Lower bound of the radius in red channel (default = 0.5) |
-| -rmax | Upper bound of the radius in red channel (default = 2.5) |
-| -gmin | Lower bound of the radius in green channel (default = 3.5) |
-| -gmax | Upper bound of the radius in green channel (default = 4.5) |
-| -h | Help |
+| -d | the path to the folder containing all images - Required by the program |
+| -rn | the name of red channel - Required by the program |
+| -gn | the name of green channel - Required by the program |
+| -e | eccentricity threshold - default = 1.2 |
+| -rmin | lower bound of the radius in red channel - default = 0.5 |
+| -rmax | upper bound of the radius in red channel - default = 2.5 |
+| -gmin | lower bound of the radius in green channel - default = 3.5 |
+| -gmax | upper bound of the radius in green channel - default = 4.5 |
+| -h | help |
   
 The program creates "Results" folder in the same directory as the images. In "Results", there are several files namely Parameters_results.txt, radius_profile.png, raw_data.csv, and summary.csv
 
