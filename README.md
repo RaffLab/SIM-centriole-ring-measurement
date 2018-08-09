@@ -84,7 +84,7 @@ The program perform Otsu thresholding on the **first frame** of the video. The s
 The output:  
 
 | Name | Description |
-| :--- | :-------------------------------------------------------------------------------------------- |
+| :------------ | :-------------------------------------------------------------------------------------------- |
 | Asl_montages.png | The montage of the green channel |
 | Cep97_montages.png | The montage of the red channel |
 | Parameters_results.txt | The parameters and threshold used in the program to obtain the data |
