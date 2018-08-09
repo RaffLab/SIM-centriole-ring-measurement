@@ -60,6 +60,7 @@ The available arguments of the program are:
 python quantitfy_centrosome.py -d -rn -gn [-e] [-rmin] [-rmax] [-gmin] [-gmax] [-h]
 ```
 Square bracket indicates it is an optional argument  
+  
 | Argument | Description |
 | :--- | :---------------------------------------------------- |
 | -d | the path to the folder containing all images - Required by the program |
