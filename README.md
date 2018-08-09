@@ -82,7 +82,7 @@ There are two montages, each contains multiple centrioles-model pair:
 The program perform Otsu thresholding on the **first frame** of the video. The same threshold will be applied throughout every frame of the video. Any intensity above the threshold will be preserved in the binarized mask.  
 
 The output:  
-
+  
 | Name | Description |
 | :------------ | :-------------------------------------------------------------------------------------------- |
 | Asl_montages.png | The montage of the green channel |
@@ -91,7 +91,7 @@ The output:
 | radius_profile.png | The figure demonstration the radius measured from red and the green channel |
 | raw_data.csv | with each row is the features of each centriole |
 | summary.csv | calculate the mean, standard deviation, and other statistical parameters from raw_data.csv |
-
+  
 ### Advanced usage and caution
 - Remember to create a **Blue** bounding box for centriole that you want to measure!
 
