@@ -53,11 +53,11 @@ source activate CV
 ```
 Press **Enter** Then type:  
 ```
-python quantitfy_centrosome.py -d "/Users/your_user_name_of_computer/Desktop/Demo" -rn "Cep97" -gn "Asl"
+python measure_radius.py -d "/Users/your_user_name_of_computer/Desktop/Demo" -rn "Cep97" -gn "Asl"
 ```
 The available arguments of the program are:  
 ```
-python quantitfy_centrosome.py -d -rn -gn [-e] [-rmin] [-rmax] [-gmin] [-gmax] [-h]
+python measure_radius.py -d -rn -gn [-e] [-rmin] [-rmax] [-gmin] [-gmax] [-h]
 ```
 Square bracket indicates it is an optional argument  
   
