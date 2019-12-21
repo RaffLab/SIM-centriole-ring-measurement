@@ -1,8 +1,8 @@
 # Measure the radius of labelled centriole imaged by 3DSIM
 
-The title is self-explanatory. We want to measure the position of different centriolar protein relative to the center of the centriole using 3DSIM. To measure, we perform Ring Gaussian Modelling on each centriole and obtain the thickness of centriole, major, and minor axis of it. 
-The image are annotated by blue bounding box (0, 0, 255) using Fiji.  
-It is an example image we obtained from 3DSIM. Cep97 and Asl were labelled:  
+The title is self-explanatory. We want to measure the position of different centriolar proteins relative to the center of the centriole using 3DSIM. To measure, we perform Ring Gaussian Modelling on each centriole and obtain the thickness of centriole, major, and minor axis of it. 
+The centrioles are annotated by blue bounding boxes (0, 0, 255) using Fiji.  
+This is an example image we obtained from 3DSIM. Cep97 and Asl were labelled:  
 ![alt text](Images/example1.png)  
 (courtesy of Alan Waimann)
 
@@ -43,7 +43,7 @@ git clone https://github.com/SiuShingWong/SIM-centriole-size-measurement.git
 ```
 
 ### Running and testing the program
-Close all the terminal window. Open terminal and type:  
+Close all terminal windows. Open terminal and type:  
 ```
 cd Desktop/SIM-centriole-size-measurement
 ```
@@ -73,14 +73,14 @@ Square bracket indicates it is an optional argument
 | -gmax | upper bound of the radius in green channel - default = 4.5 |
 | -h | help |
   
-The program creates "Results" folder in the same directory as the images. In "Results", there are several files namely Parameters_results.txt, radius_profile.png, raw_data.csv, and summary.csv
+The program creates "Results" folder in the same directory as the images. In "Results", there are several files, namely Parameters_results.txt, radius_profile.png, raw_data.csv, and summary.csv
 
 There are two montages, each contains multiple centrioles-model pair:
 ![alt text](Images/Asl_montages.png)  
 ![alt text](Images/Cep97_montages.png)  
 
 ### Explanation of the output
-The program perform Otsu thresholding on the **first frame** of the video. The same threshold will be applied throughout every frame of the video. Any intensity above the threshold will be preserved in the binarized mask.  
+The program performs Otsu thresholding on the **first frame** of the video. The same threshold will be applied throughout every frame of the video. Any intensity above the threshold will be preserved in the binarized mask.  
 
 The output:  
   
